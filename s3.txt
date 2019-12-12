@@ -1,0 +1,143 @@
+S3 : Simple Storage Service : Object based Storage
+
+--> Object based Storage : Designed to store flat files:  Amazon S3, GDrive, OneDrive, Dropbox.. 
+--> Block based storage : Designed to install and run Operating system : EBS, Instance store
+--> Network Based storage : Runs over the network, attach as local storage : EFS, FSx
+
+
+
+--> Unlimted storage
+--> No Pre-Provisioning required (Pay as you go)
+--> Based on access patterns we can choose different storage classes.
+--> We store all data in Buckets. 
+--> Bucket name must be unique.
+--> Max object size : 5 Tb, Min 0 bytes 
+
+
+Naming Limitation : (Should comply with DNS naming polocies)
+--> Min Char : 3, Max 63 char
+--> Should not contains any capital letters
+--> Accepts Alpha Numeric but lower case only.
+--> It should not resemble IP address format. (S3 Static website hosting)
+--> Should not start with . , Should not end with . , No Adjesent ..
+
+
+https://s3.region.amazonaws.com/bucketname/objectname
+
+
+gdrive 
+
+80 gb data / 100 gb cost			No Pre Provisioning (80 gb)
+
+10 gb Frequently				S3 Standard (3)
+20 gb Infrequently accessed			Standard IA (3) / OneZone IA (1)
+20 gb Less Critical / Reproducable		RRS (Reduced Redundancy Storage) 
+20 gb Archieve data				Glacier / Glacier Deep Archieve
+10 gb No Idea 					Intelligent tier storage
+
+
+Availability : 99.9 % / 99.99% / 99.5 %
+Durability : 99.999999999 % (except RRS 99.99%)
+
+
+
+Task 1 : Read S3 performance chart : aws.amazon.com/s3
+
+Task 2 : Create an S3 bucket and upload data, Make object publicly accessable.
+
+Version : 
+Life Cycle Management rule :
+CRR and SRR :
+S3 Static website hosting :
+Encryption : 
+Object Lock : 
+Bucket Polocies and ACLs:
+Bucket Mangement option : 
+
+
+Versioning : Track all changes / objects on s3 platform. 
+--> Works as backup option also.
+--> latest version / Current Version : Most resent uploaded object
+--> previous version : All old uploads
+
+When Version : HIDE , If we delete an object, we will get a delete Marker, Delete the "Delete marker" to get the object back to s3 bucket.
+
+
+LCR : life Cycle Management Rules : 
+
+
+CRR / SRR : Cross Region Replication and Same Region Replication : 
+
+--> Source bucket and destination bucket should enable with versioning.
+--> It's oneway replciation.
+
+S3 Static Website : 
+
+Domain Name = Bucket Name
+--> Make public readonly to deliver the website.
+
+--> Availability : 99.99%
+--> Durability : 99.999999999 %
+
+index.html
+error.html
+
+http://avinash.website.s3-website.ap-south-1.amazonaws.com
+
+
+http Status codes : 
+
+2xx --> OK / Success
+3xx --> Redirection errors
+4xx --> Client Side error
+
+
+
+Free Tier : 
+5 Gb S3 Standard storage class
+2000 PUT
+20,000 GET
+
+
+Encryption : 
+
+--> In-Transit Encryption 
+
+	--> SSL / TLS
+
+--> Server Side Encryption / At Rest
+
+	--> SSE - S3 AES-256			(S3 takes care about encry / decryp)
+	--> SSE - KMS				(Key Management Service )
+
+		aws/s3 Also manages by KMS
+		we can create a key and KMS manages that key
+
+	--> SSE - C (Customer Provided)		(KMS , Customer Can upload his own key)
+
+--> Client Side Encryption
+
+	--> Before uplaoding data to s3, we can encrypt in local device then upload 		encrypted data to s3
+
+Key Usage : We can use the key
+Key Administration : We can manage the key, We can even give key delete permissions also.
+
+
+
+Object Lock : While creating bucket, we need to enable this feature.
+--> Versioning must be enabled
+
+Governance mode : Can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode : Cannot be disabled by any user, including the root account.
+
+
+Static website
+Encryption
+Object lock
+
+
+
+
+
+
+
