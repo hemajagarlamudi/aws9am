@@ -131,9 +131,131 @@ Governance mode : Can be disabled by AWS accounts that have specific IAM permiss
 Compliance mode : Cannot be disabled by any user, including the root account.
 
 
-Static website
-Encryption
-Object lock
+
+Glacier : Data will not be available immediately.
+
+Initialise Restore :  Number of days the restored copy is available 3 days.
+
+Bulk retrieval : Typically within 5-12 hours
+Standard retrieval : Typically within 3 - 5 hours
+Expedited retrieval : Within 1 - 5 minutes when retrieving (Object size less than 250MB)
+
+
+Transfer acceleration : NO FREE TIER
+
+
+SNS : Simple Notiication Service 
+Enable : Everyone permissions, if we want to use with s3 bucket.
+
+Topic Name : We need to add subscribers (email ids)
+S3Notifications : user email, user email... 
+
+
+Permissions : 
+--> Bucket ACL
+--> Bucket Polocies
+
+
+Access for other AWS accounts : We need cananical ID of another aws account user.
+
+
+Bucket policy : JSON
+
+Effect : Allow / Deny 			: Deny
+Principal : IAM User / Group		: arn:aws:iam::518084852393:user/avinash
+Actions : 				: Upload (PUT)
+Amazon Resource Name (ARN) : Bucket	: arn:aws:s3:::avinash.12102019
+
+
+1. IAM User, Full Permissions on S3 platform.. bucket, Deny PUT
+
+{
+    "Id": "Policy1576211125461",
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1576211115750",
+            "Action": [
+                "s3:PutObject"
+            ],
+            "Effect": "Deny",
+            "Resource": "arn:aws:s3:::BucketName/*",
+            "Principal": {
+                "AWS": [
+                    "IAM USER/Group ARN"
+                ]
+            }
+        }
+    ]
+}
+
+____________________________________________________________________
+
+2. IAM User, No Permissions on AWS, Bucket = Allow access
+
+
+Effect : Allow / Deny 			: Allow
+Principal : IAM User / Group		: iam user arn name
+Actions : 				: *
+Amazon Resource Name (ARN) : Bucket	: arn:aws:s3:::bucketname
+					  arn:aws:s3:::bucketname/*
+
+https://s3.console.aws.amazon.com/s3/buckets/bucketname
+
+
+{
+  "Id": "Policy1576211641832",
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "Stmt1576211564024",
+      "Action": [
+        "s3:ListBucket"
+      ],
+      "Effect": "Allow",
+      "Resource": "bucket name",
+      "Principal": {
+        "AWS": [
+          "iam user arn"
+        ]
+      }
+    },
+    {
+      "Sid": "Stmt1576211627563",
+      "Action": [
+        "s3:GetObject",
+        "s3:PutObject"
+      ],
+      "Effect": "Allow",
+      "Resource": "bucketname/*",
+      "Principal": {
+        "AWS": [
+          "iam user arn"
+        ]
+      }
+    }
+  ]
+}
+
+___________________________________________________________________________
+
+Cloudwatch : Metrics / graphs for all our resources about usage. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
