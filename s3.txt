@@ -243,11 +243,50 @@ Cloudwatch : Metrics / graphs for all our resources about usage.
 
 
 
+Tools to Manage S3 Platform with 3rd party applications:
+__________________________________________________________
+
+--> S3browser
+--> Cloudberry Explorer
+Winscp
+Cyberduck
+
+__________________________________________________________
+
+Import / Export :
+ 
+Snowball : 50/80 TB : 200$/Job, 10 Days free, 
+Snowball Edge : 100 TB : 250$/Job, 10 Days free, 
+Snowmobile : PB Scale Container
 
 
 
+Maintain Unique naming prefix to get best peformance from s3 platform
+
+3,500 Uploads/Sec (PUT/COPY/POST/DELETE)
+5,500 Downloads/Sec (GET/HEAD requests per second per prefix in a bucket). 
 
 
+s3://avinash.12102019/A.png
+
+s3://avinash.12102019/avinash/rds.txt, a.txt, b.txt, c.txt
+s3://avinash.12102019/naresh/rds.txt, a.txt, b.txt, c.txt
+
+
+avinash/14/12/2019/a.txt
+avinash/14/12/2019/b.txt
+avinash/14/12/2019/c.txt
+naresh/14/12/2019/c.txt
+naresh/14/12/2019/b.txt
+naresh/14/12/2019/a.txt
+
+
+14/12/2019/avinash/a.txt
+14/12/2019/avinash/b.txt
+14/12/2019/avinash/c.txt
+14/12/2019/naresh/a.txt
+14/12/2019/naresh/b.txt
+14/12/2019/naresh/c.txt
 
 
 
