@@ -1,0 +1,63 @@
+EC2 : Elastic Compute Cloud
+		CPU			Cloud
+		Memory
+		Storage
+		GPU
+		Application / Software
+		Network
+
+
+Configuration : Guess the capacity : Vendors : 100% along with PO : 3-4 weeks : Installation : OS : Application : UAT : Production
+
+Vertical Scaling : Upgrading same hardware
+Horizontal scaling : Distributing the load
+
+
+On-Demand EC2 Instance : Test the application for the first time, No specific usecases, 
+			Pricing : /Sec billing with Min of 60 Sec, No Contract, Monthly
+
+Reserved Instances : For stable workloads, Longtime runs with AWS. 
+		Durations : 1 Yr / 3 Yrs
+
+	Standard RI : We canot change the configuration for the duration.
+	Convertable RI : We can change the configuration.
+  	Scheduled RI : for repeated/persistant requests
+
+	Pricing : Full Upfront : 100% payment while purchasing
+		  Partial upfront : Aprox. 30-40% while purchasing, Remaining Monthly
+		  No Upfront : Pay Monthly basis
+
+Spot Instances : We must have flexible start / stop, High Config servers at low cost
+2 Min warning period, Spot Advisor, Pricing History
+We cannot quote more than On-Demand pricing
+
+--> 2 Hr 45 Min , Price is increased, AWS Terminated : 2 Hrs.. 
+--> 2 Hr 45 Min, Price not increased, You Terminated instance : 2 Hrs 45 Min.. 
+
+STOP : We can perform stop/start, we will not going to loss any data.
+Terminate : Delete
+
+AWS Marketplace : Where we can buy / sell applications.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
