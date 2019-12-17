@@ -40,7 +40,53 @@ Terminate : Delete
 AWS Marketplace : Where we can buy / sell applications.
 
 
+Launching Windows EC2 Instance : 
 
+1. Select an AMI (Amazon Machine Image : Template of an OS, services and applications) : Windows Server 2012 R2 Base
+
+2. Choose an Instance Type : (t2.micro FREE TIER)
+
+General Purpose : t2, t3		
+Compute optimized : c4, c5, c5n, c5d
+Memory Optimized : r4, r5, r5d, x1
+Storage Optimized : d2, i2, i3
+GPU Optimized : P , G
+
+Compute optimized : c4.2xlarge : 8 vCPU, 15 Memory
+Memory optimized  : r4.2xlarge : 8 vCPU, 61 Memory
+
+
+Step 3: Configure Instance Details
+
+--> No Of Instance, Spot, Network (VPC- Default VPC)
+
+Shutdown behavior : STOP / TERMINATE
+Enable termination protection : Yes  	(Need to turn off this, when we want to termibate our instance)
+
+Monitoring : Cloudwatch is responsible for Monitoring
+	Basic Monitoring : 5 Min (Enabled by defaultly)
+	Detailed Monitoring : 1 Min (No Free Tier)
+
+
+Step 4: Add Storage (EBS) : 30 GB General Purpose SSD
+
+Step 5: Add Tags 
+
+Step 6: Configure Security Group
+
+SG : Firewall at Instance Level. 
+
+(0-65535 Ports / Protocols)
+
+Windows :  RDP (Remote Desktop Protocol):  3389 : 
+Linux : SSH (Secure Shell): 22 
+http: Port 80 
+https : Port 443
+
+Source : 
+Custom : We can give any network Ip
+MyIP : It picks currently connected networks public IP address
+Anywhere : 0.0.0.0/0
 
 
 
