@@ -89,6 +89,30 @@ MyIP : It picks currently connected networks public IP address
 Anywhere : 0.0.0.0/0
 
 
+EIP : Elastic IP Address : Dedicated IP address allocated to our AWS Account in a region.
+We can associate to our required resources.
+
+ENI : Elastic Network Interface : Additional NIC Cards for our EC2 Instance
+
+EC2 Instance Isolation Diagram
+
+Status Check on EC2 Instancce : 
+--> Instance Status checks
+--> System Status check
+
+
+Task 1 : Ping an ec2 instance from your local device.
+
+Task 2 : Install IIS in Windows Server and Deliver to everyone. 
+
+Task 3 : Associate an Additional ENI to the server created on Task 2. 
+
+--> Launch a New instance in same region and Verify the Task 2, Task 3 outputs with Private IPs.
+
+
+Task 4 : Launch a ec2 instance and Create an Additional user, Give local admini permissions and give remote desktop permissions also. And login as Additional user. 
+
+
 
 
 
