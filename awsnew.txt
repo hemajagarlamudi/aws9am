@@ -70,25 +70,10 @@ APN : Amazon Partner Networks :
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 EC2 : Server : 750 Hours /Month Free Tier  WIndows t2.micro : 1 server = 31 Days.. 
 		750 Hrs/ Month t2.micro Linux 
 S3 : Storage  : 5 Gb Standard storage 
 RDS : Database : 750 Hr/s Month db.t2.micro...  1 db = 31 days... 
-
-
-
 
 
 Virtual MFA : Smartphone
@@ -154,7 +139,6 @@ polocies : 3 Types
 3. Customer Managed 
 
 
-
 Explicitly DENY
 
 user : Admin user level : Group Admin : Group Denys3  --> DenyS3r
@@ -176,6 +160,63 @@ Task 3 : Create an IAM user with Admin Permissions and Create a custom policy wi
 Task 4 : Task3 user, create a Group woth S3FullAccess, Another group with "AdministratorAccess" and Add Task3 user to multiple groups and test the access on S3 platform.
 
 Task 5 : Run the policy simulator on Task4 User and understand what policy is denying s3 access for this IAM user.
+
+
+Snapshots : Backup copies of our EBS volumes.
+--> Stores in S3 platform
+--> Volume Encrypted --> SS also Encrypted
+--> Volume unencry --> SS Unencry
+
+--> We can create volume in same region , Another AZ
+--> Copy snapshot to Another Region
+--> We can make it public also
+--> We can share privately with ANother AWS account user also.
+--> Incremental backups.
+
+
+DLM : Data Lifecycle manager
+
+By using Tags, We can filter the volumes / Instances.
+--> Instance
+--> Volume
+
+
+Snapshot Automation using Cloudwatch Events : 
+_____________________________________________
+
+--> Can apply for only one Volume (Volume ID)
+
+
+
+____________________________________________________________________________
+
+Images : 
+
+
+COunt Req : 20 : Install Syammantic, MS Office, Custom Application, Putty, Custom Wallpaper.. 
+
+
+Taske 1 Instance ==> Perform all customizations --> Make it as a IMAGE --> Launch instances using that IMAGE
+
+________________________________________________________________________________
+
+Task : Create an ec2 instance will all custom setting, and launch a new instance from GoldenAMI/CustomAMI and verify you got all settings or not.?
+
+
+________________________________________________________________________________
+
+Task : Launch an ec2 instance and setup a custom password (Assume you forgot password), How can you crack it. (You have Keypair in AWS and Local Laptop)
+
+
+Task 2 : Launch an ec2 instance and setup a custom password (Assume you forgot password), How can you crack it. (You Do not have Keypair in AWS and Local Laptop)
+
+
+https://docs.amazonaws.cn/en_us/AWSEC2/latest/WindowsGuide/ResettingAdminPassword_EC2Config.html
+
+
+
+
+
 
 
 
