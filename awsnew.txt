@@ -215,8 +215,88 @@ https://docs.amazonaws.cn/en_us/AWSEC2/latest/WindowsGuide/ResettingAdminPasswor
 
 
 
+Userdata /Bootstrap script:
+
+<powershell>
+tzutil /s "India Standard Time"
+</powershell>
 
 
+http://169.254.169.254/latest/user-data/
+
+
+Metadata: 
+_________
+
+http://169.254.169.254/latest/meta-data/
+
+
+ami-id
+ami-launch-index
+ami-manifest-path
+block-device-mapping/
+events/
+hostname
+identity-credentials/
+instance-action
+instance-id
+instance-type
+local-hostname
+local-ipv4
+mac
+metrics/
+network/
+placement/
+profile
+public-hostname
+public-ipv4
+public-keys/
+reservation-id
+security-groups
+services/
+
+
+Virtualization type: hvm and PV
+
+
+HVA // HVM : Hardware Virtual Machene : We have direct access to underlying hardware. Better performance.
+
+PV : Para virtual (We regularly don't use this --> We need additional Drivers (PVD) to get access to Underlying physical resources)
+
+
+________________________________________________________________________________________
+
+
+Linux : 
+
+AVINASHAWS1
+
+https://www.udemy.com/course/linuxwithavinash/?couponCode=AVINASHAWS1
+
+https://www.udemy.com/course/jenkinswithavinash/?couponCode=AVINASHAWS1
+
+
+________________________________________________________________________________________
+
+
+Linux Launch Process : 
+
+Works with ppk file format: 
+Putty
+Mobaxterm
+
+Works with pem file format:
+Windows Command Prompt (Openssh enabled)
+Git 
+
+
+ssh -i Pemfile ec2-user@publicIP
+
+________________________________________________________
+
+Launch and Connect to your linux instance.
+
+Test the Userdata and Metadata url.
 
 
 
