@@ -1,0 +1,50 @@
+sudo su			--> to switch to root user
+whoami			--> To know currently working user
+
+yum update -y		--> To update our ec2 instance with latest patches
+
+yum 			--> Yellowdog update manager
+
+rpm 			--> Redhat package manager (Need to takes care about dependencies)
+
+yum install httpd -y	--> Install Apache 2.4 web server
+service httpd start 	--> TO start the Apache Webserver  (status / stop / restart)
+chkconfig httpd on	--> Make httpd as a logon/startup service. 
+
+/var/www/html 
+
+cd			--> Change directory 	(cd /var/www/html)
+ls			--> List
+ls -a			--> List including hidden
+ls -ll			--> long list including properties
+
+cp			--> Copy and paste 	(cp source destination)
+mv			--> Cut and paster	(mv source destination)
+mv			--> Use for rename purpose also. 
+
+vim Editor : 
+vim a.txt
+I	--> INSERT Mode
+ESC	--> Comeout from Insert mode (Readonly mode)
+:wq	--> Write and Quit	(Save)
+:q!	--> Quit without saving (DOn't save)
+
+touch 			--> To create a simple 0 byte file	(touch a.txt)
+cat / more		--> To view the data without opening the file.
+
+
+
+Task : Install Apache and deliver a custom webpage.
+
+
+
+
+
+
+
+
+
+
+
+
+
