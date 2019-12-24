@@ -38,10 +38,63 @@ Task : Install Apache and deliver a custom webpage.
 
 
 
+-	rw-	r--	r-- 1 root root 0 Dec 24 03:52 b.txt
+d	rwx	r-x	r-x 2 root root 6 Dec 24 03:53 test
+	user 	group	other		  CreatedDate filename
+
+- File
+d Directory
+
+r --> 4
+w --> 2
+x --> 1
+
+rwx = 4+2+1 = 7
+rw- = 4+2+0 = 6
+r-x = 4+0+1 = 5
+r-- = 4+0+0 = 4
+
+chmod 777 test
+
+
+Step 1 : Create a volume in EBS Dashboard and Associate/mount it to ec2 instance.
+
+Step 2 : Verify the association status "lsblk" and "df -Th" and navigate to /dev verify.
+
+step 3 : Create a file system for new volume 
+mkfs -t xfs /dev/xvd*
+
+Step 4 : Mount it to a directory. 
+mount /dev/xvd* newvolume
+
+Step 5 : Make it a permanent mount
+
+cat /etc/mtab		Get the most recent entry from the mtab file and add it is fstab file
+
+vim /etc/fstab		--> Add entry
+
+mount -all
+
+Example Entry : 
+/dev/xvdf /home/ec2-user/newvolume xfs rw,relatime,attr2,inode64,noquota 0 0
 
 
 
+useradd username		--> TO create a user
+passwd username			--> To set a password
+usermod -G wheel username	--> Adding this user to Wheel group to get local admin 				    permissions
 
+
+Task 1 : Enable password authentication for ec2-user.
+
+Task 2 : Enable root login directly with a password. 
+
+Task 3 : Create a .ssh dir for Newly created user and login directly as new user 
+	(instead of ec2-user)
+
+Task 4 : Launch an ec2 instance, associate an additional volume, make it available permanently. 
+
+unmount from instance 1. Launch another instance in Another AZ, and mount volume and verify the data.
 
 
 
