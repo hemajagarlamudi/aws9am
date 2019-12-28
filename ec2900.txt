@@ -173,6 +173,19 @@ Physical
 
 
 
+Auto Scaling Group : 
+
+1. Create an Golden AMI / Custom AMI	(Installed apache and created an AMI)
+
+2. Create an ELB	(Created a Plain/empty ELB)
+
+3. Create an ASG
+	3.1 Create an Launch configuration	(Settings for ec2 instances)
+	3.2 Create an ASG
+
+
+
+Task : Create an ASG and deliver the application. 
 
 
 
