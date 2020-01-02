@@ -188,6 +188,68 @@ Auto Scaling Group :
 Task : Create an ASG and deliver the application. 
 
 
+CLI : Programatic Access : 3rd party applications, API Calls, SDK operations... 
+
+aws ec2 run-instances --image-id ami-0ce933e2a --count 1 --instance-type t2.micro --key-name MumbaiKP --subnet-id subnet-0755d3f8341 --security-group-ids sg-0586f521
+
+
+
+Task : 
+--> Launch an ec2 instance using CLI
+--> Try S3 Cli commands from shared document.
+
+
+Task 1: Create an "index.html" file and upload to one of the s3 bucket. 
+
+Write userdata on your ec2 instance to make it as a webserver, and copy index.html to web document path and deliver it.
+
+
+Placement Groups : Designed to procide Low network latency and high network throughout.
+--> Placement groups can't span across multiple AZs. 
+
+Cluster : A cluster placement group is a logical grouping of instances within a single Availability Zone.
+
+Spread : A spread placement group is a group of instances that are each placed on distinct racks, with each rack having its own network and power source.
+
+Partition : Partition placement groups help reduce the likelihood of correlated hardware failures for your application.
+
+
+
+LAMP : Linux Apache Mysql PHP
+
+
+EFS : Elastic File System 
+--> EFS supports NFSv4.1 file system (Network File System)
+--> EFS supports only Linux OS
+--> We need to mount to OS level directory and make an entry in fstab file for perm mount.
+
+Free Tier : 5 gb EFS storage
+
+cat /etc/mtab		--> Get entry related to EFS
+
+vim /etc/fstab		--> Add entry there
+
+
+Task : Practice EFS as we discussed.
+
+Task 2 : Mount the EFS, while launching the ec2 instance. 
+
+
+
+
+https://github.com/avizway1/aws-codepipeline-s3-codedeploy-linux
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
