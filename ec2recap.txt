@@ -1,0 +1,175 @@
+ec2 : Elastic compute cloud
+
+On-Demand : /hr
+
+Reserved : 1 yr/3 yrs.. 
+	Pricing : Full upfront : 100%
+		 Partial upfront : 30-40 % now, remaining monthly basis
+		 No upfront : Monthly 
+	Stanadrd RI : We cannot change the config
+	Convertable RI : We can upgrade
+	Scheduled RI : 
+
+Spot : We are bidding th price. 
+	If price increased, aws terminates, No cost for partial hours.  3 hr 45 Min : 3 
+	If price not changed, you termibated, 3 hr 45 min.. : 3 hr 45 min
+	
+	Spot fleets, Pricing history
+
+
+Tenancy : 
+	Shared Tenancy : Shared hardware
+	Dedicated Tenancy : Dedicated hardware 
+		Dedicated Instance and Dedicated Host
+
+Ec2 instance isolation diagram :
+
+AWS Hyperversior : XEN 
+
+Bare metal Instances
+
+
+Instance types : 
+
+General purpose : t2, t3
+COmpute optimized : c4, c5, c5d
+memory optimized : r3, r4, r5d, x1
+storage opt : d , i
+gpu : p , g
+
+
+Choose an AMI : 
+Choose an instance type : t2.micro
+Configure additional options : Network, roles, termination protection, shutdown behaviour(stop/terminate), userdata
+
+Userdata :  curl http://169.254.169.254/latest/user-data
+
+Chosse Storage : 
+
+root device Types : 
+1. Instance store volumes (Ephemeral storage) : We cannot stop/start the instance. 
+2. EBS Elastic Block Storage
+
+root volume : gp2, io1 and magnetic
+
+SSD : General purpose ssd (gp2), Provisioned iops (io1)
+HDD : Throughout optimised HDD (st1), cold HDD (sc1)
+Magnetic  : Magnetic (standard)
+
+aws.amazon.com/ebs
+
+
+Configure tags : 
+
+COnfigure Security Groups : 
+
+Stateful : We need to takes care about inbound rules only. 
+
+linux : ssh : 22			: Custom / Anywhere / MyIP
+windows : rdp : 3389
+web : http : 80
+web : https : 443
+
+
+Create a keypair :  .pem 	(aws keeps puboic key, Private key downloads)
+
+putty --> .pem to .ppk
+
+
+Images : Virtualisation : (PV and HVM) : copy to Another region, Aws acc, public
+
+Snapshots : s3 platform, Incremental backup : copy to Another region, Aws acc, public
+
+
+ELB : Distributes the workload across multiple AZs. 
+
+Classic : http, https, tcp 
+Application ELB : http and https.. WAF (Web Application Firewall) / containers , microservices
+Network ELB : TCP, UDP, tls
+
+crosszone LB : 
+
+
+ASG : 
+1. Create a Launch configuration
+2. Create an ASG
+
+
+EFS : Elastic file system 
+--> NFSv4.1
+--> Only Linux
+--> Port : NFS : 2049
+
+Elasticbenatslk : We will get preconfigured platforms, php/java/windows(iis)/ruby
+
+Placement group : low network latency and high n/w throughput .. cluster/spread/partion
+
+
+________________________________________________________________________________________
+
+Route53 : AWS DNS Service 
+
+
+DNS : Domain Naming System / service.. 
+
+Converts FQDN/DN to IP Addresses and vice versa.. 
+
+ec2 instance --> elb --> route53 --> "avinash.website"
+
+avinash.website
+avinash.com
+avinash.in	--> TLD (Top level Domain)
+
+avinash.co.in 	--> SLD (Second Level Domain)
+avinash.gov.in 	
+
+
+IANA : root zone DB : 
+ICANN : The Internet Corporation for Assigned Names and Numbers : Uniqueness
+Domain Registrers : godaddy, bigrock, route53, freenom.. 
+
+whoisdb : Who is database : 
+
+Domain transfer also available
+
+
+Route53 --> HostedZone (H Zone = Domain Name)
+
+--> NS (Name Server Record)
+--> SOA (Start of Authority)
+
+--> A Record (Address ) : IP --> Name		(A and Alias)
+--> Alias Record 
+
+--> CNAME (Cananical Name) : Redirections 
+--> MX (Mail Exchange)
+--> TXT (Text)
+--> PTR
+
+
+
+Hosted Zone Cost : 0.50$/Month
+
+
+Freenom.com --> GIves a Free Domain for everyone. Get a domain name first. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
