@@ -62,7 +62,51 @@ Now, private subnet is member of Main Route table automatically, as main routeta
 Step 5 (Optional) : Enable "AutoAssign Public Ip" setting on Public Subnet.
 
 
-Task : Create a VPC .
+ENable Internet for Private Subnet ec2 instances. (OS Patches, Application required internet, api calls to internet hosted application)
+
+NAT Instance (Free Tier) : Dev/test
+--> This is an ec2 instance desgined to perform NAT operations.
+--> We need to launch this in our CUSTOMVPC's PUBLIC SUBNET.
+--> As it is an ec2 instance, We need to take care about Security Groups (http, https).
+--> We need to DISABLE SOURCE/DESTINATION check.
+
+--> If internet is bottleneck, Increase the instance configuration.
+
+--> We need to edit the ROuteTables accordingly.
+
+
+NAT Gateway (No Free Tier) : Prod
+
+--> Create a NATGateway and associate an EIP.
+--> Edit the route tables accordingly. 
+
+--> If we are using IPv6, To provide internet to Private subnet instance "Egress Only Internet Gateway".
+
+
+Logs : 
+
+ELB : AccessLogs
+VPC : FlowLogs
+
+--> We can store logs to "Cloudwatch logs group" and "S3Bucket"
+
+
+NACL : 
+--> NACL are Stateless. We need to takes care about Inbound and outbound rules. 
+--> We can allow/deny traffic.
+
+
+VPC Peering : 
+
+VPN :
+Endpoints: 
+
+
+
+
+
+
+
 
 
 
