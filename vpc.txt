@@ -94,13 +94,32 @@ VPC : FlowLogs
 NACL : 
 --> NACL are Stateless. We need to takes care about Inbound and outbound rules. 
 --> We can allow/deny traffic.
+--> NACLs works at Subnet Level.
+--> One Subnet can be member of one NACL at a time.
+--> Default NACL allows all the traffic.
+--> We need to open ephemeral ports. (1025-65535)
 
 
-VPC Peering : 
+ssh -i keypair.pem ec2-user@ipaddress
 
-VPN :
-Endpoints: 
 
+VPC Peering :  Establish connection between multiple VPCs. 
+
+
+Source Information		Destination Information
+
+vpc-id		vpc-id
+192.168.0.0/16			172.31.0.0/16
+
+How to access s3/dynamodb resources from Private SUbnet without internet.??
+
+--> Gateway and Interface Endpoint
+
+Gateway endpoint supports s3 and dynamodb
+
+
+
+VPN : NO Free Tier Eligibility
 
 
 
