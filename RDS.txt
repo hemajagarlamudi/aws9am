@@ -43,6 +43,22 @@ chkconfig httpd on
 https://aws.amazon.com/getting-started/projects/deploy-wordpress-with-amazon-rds/
 
 
+Multi-AZ deployement : Another copy of our DB instance runs in Another AZ in same Region.
+
+Read Replica: Read only copy. 
+--> It can perform only Readonly operations.
+
+
+
+Task 1 : https://aws.amazon.com/getting-started/projects/deploy-wordpress-with-amazon-rds/
+
+Task 2 : Launch an MSSQL Express edition in RDS and Launch a instance in Public subnet , Install SSMS (SQL Server Management Studio) and connect RDS using endpoint.
+
+
+
+
+
+
 
 
 
