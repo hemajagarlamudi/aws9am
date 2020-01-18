@@ -56,6 +56,65 @@ Task 2 : Launch an MSSQL Express edition in RDS and Launch a instance in Public 
 
 
 
+Backup on RDS: Snapshots
+
+--> Automatic Snapshots : If we enable "automatic backup", we will get these. We cannot delete AS. AWS creates these AS, when it detects any major changes on db.
+
+--> Manual Snapshots : We need to create manually. Need to delete manually.
+
+
+
+Restore from s3: Aurora and Mysql
+--> Percona Xtra backup
+
+
+
+Amazon Aurora : AWS's own Database..
+
+--> Server : With Writer and Readers
+--> Serverless : Give required RAM capacity
+
+Regional : You provision your Aurora database in a single AWS Region.
+
+Global : You can provision your Aurora database in multiple AWS Regions. Writes in the primary AWS Region are replicated with typical latency of less than 1 sec to secondary AWS Regions.
+
+________________________________________________________________________________________
+
+DynamoDB : NoSQL db : Serverless architecture : 
+
+Single digit millisecond latency at any scale..   Mobile, gaming, ad-hoc, IoT... 
+
+Read operation
+Write operation 
+
+Min 1
+Max 10k
+
+
+Cache on DynamoDB :  DAX (Dynamodb Accelerator)
+
+
+Task : https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacToe.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
