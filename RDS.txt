@@ -98,6 +98,61 @@ Task : https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/TicTacTo
 
 
 
+Redshift : AWS DW (Data Warehousing)
+--> AWS Redshift is AWS own Datawarehousing solution.
+
+Single Node cluster: 
+Single Node clusters consist of a single node which performs both leader and compute functions.
+
+Multi Node  Cluster : 
+Compute nodes store your data and execute your queries. 
+The leader node is the access point for ODBC/JDBC and generates the query plans executed on the compute nodes.
+
+
+Elasticache : Caching service for RDS. It supports 2 caching engines.
+--> Redis
+--> MemcacheD
+
+DMS : Database Migration Service
+
+Homogenious : Same db from on-prem to aws : mysql --> mysql
+Heterogenious : diff db in on-prem : SCT (Schema Converton tool) : AWS supported db
+
+Go through youtube video
+______________________________________________________________________________
+
+
+Cloudfront : 
+
+Region : Physical / Geographical location : 
+AZ : 69 AZs.. 
+PoP (Point of Presence) / Edge : 120+
+
+We need to use a service called : Cloudfront 
+
+--> Cloudfront advantage : It can detect and prevent DDoS Attacks.
+
+--> S3 
+--> Application ELB
+--> Media services
+
+
+2 Types of : 
+--> Web :
+--> RTMP :
+
+TTL : Time to Live : 
+Min : 0 sec
+Default TTL : 86400 Sec (24 Hrs)
+Max TTL : 31536000 (365 Days)
+
+
+
+Task : Design website with Cloudfront, A ELB and Route53.
+
+
+
+
 
 
 
