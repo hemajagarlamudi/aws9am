@@ -151,7 +151,44 @@ Max TTL : 31536000 (365 Days)
 Task : Design website with Cloudfront, A ELB and Route53.
 
 
+____________________________________________________________________________________
 
+
+Security Services : 
+
+Shared Responsibility/Security Model : 
+
+--> Security OF the Cloud : AWS responsible
+--> Security IN the Cloud : We are responsible
+
+
+____________________________________________________________________________________
+
+Cloudtrail : Logging service in AWS
+--> Enabled by defaultly, But stores only Last 90 Days Activities.
+
+We we want to store for unlimited days, Create a trail to an s3 bucket.
+
+--> Data trail : s3 and Lambda
+--> management trail : All activities
+
+--> We can Create a dedicated trail for Data and Management events.
+
+
+Config : Inventory / Change management on our AWS Resources...
+
+
+____________________________________________________________________________________
+
+ACM : Amazon Certificate Manager : 
+
+http : 
+https : SSL / TLS : 
+
+SSL : Secure Socket Layer
+TLS : transport Layer Security
+
+Amazon Signed Certificate
 
 
 
