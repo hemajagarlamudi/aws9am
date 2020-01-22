@@ -193,6 +193,30 @@ Amazon Signed Certificate
 
 
 
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/php-hawordpress-tutorial.html
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create_deploy_NET.quickstart.html
+
+https://aws.amazon.com/getting-started/projects/launch-lamp-web-app/?trk=gs_card
+
+https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/php-hadrupal-tutorial.html
+
+
+Go through AWS Directory Services Creation.. 
+
+_______________
+
+Task 1 : Install an .msi Application in your ec2 instance using RunCommand option.
+
+Task 2 : Make your Linux instance as a apache webserver using runcommand option.
+
+Task 3 : Create an Image automatically using SSM Automation option.
+
+
+____________________________________
+
+AWS Inspector : Run assesments on our EC2 instances to view all the Vulnarabilities, Issues, Network rechability, CIS benchmarks... 
+
 
 
 
