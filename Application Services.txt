@@ -1,0 +1,89 @@
+SQS : Simple Queue Service Decouple the Applications : 
+--> Poll / Pull based messeging service
+
+Monolithic app : 1 process: 1 process fails everything fails.. 
+Decouple app: SQS : Multiple processes runs at a time.. 
+
+Ex: AutoScaling Group , Hotstar, Hotel table reservation system...
+
+SQS : Max Msg size : 256 kb only
+
+Queue Attributes
+
+Default Visibility Timeout  : 30 seconds Default
+The length of time (in seconds) that a message received from a queue will be invisible to other receiving components.
+Value must be between 0 seconds and 12 hours.
+
+
+Message Retention Period : 4 days Default
+The amount of time that Amazon SQS will retain a message if it does not get deleted.
+Value must be between 1 minute and 14 days.
+
+Maximum Message Size : Max 256 KB
+Maximum message size (in bytes) accepted by Amazon SQS.
+Value must be between 1 and 256 KB.
+
+1 chunk = 64 kb
+
+
+Delivery Delay : 0 seconds
+The amount of time to delay the first delivery of all messages added to this queue.
+Value must be between 0 seconds and 15 minutes.
+
+Receive Message Wait Time : 0 seconds
+The maximum amount of time that a long polling receive call will wait for a message to become available before returning an empty response.
+Value must be between 0 and 20 seconds.
+
+Dead letter queue
+
+_______________________________________________________________________________________
+
+
+SNS : Simple Notification Service : 
+--> Create a topic and subscribers to the topic and publish to the topic.
+--> Push Notifications : 
+--> SMS / Mobile messeges : 
+
+Push Based Messeging Service : opt-out available always..  
+
+______________________________________________________________________________________
+
+SES : Simple Email Service : 	(SES + Pinpoint) = Bulk email/msgs
+
+______________________________________________________________________________________
+
+Lambda : Serverless
+
+
+
+https://www.edx.org/course/introduction-to-python-absolute-beginner-2
+
+
+
+Create a Directory Service in AWS..
+
+Task : launch AWS Workspaces
+Task 2 : WOrk on AWS Workmail, WOrkDocs..
+
+
+Get your CLoudendure licenses.. and Migrate an ec2 instance from Mumbai region to N Virginia region
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
